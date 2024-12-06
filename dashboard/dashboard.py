@@ -29,7 +29,7 @@ def create_rfm_df(df):
     return rfm_df
 
 # Load dataset yang sudah dianalisis
-all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("dashboard/all_data.csv")
 
 # Memastikan kolom format datetime
 all_df["order_purchase_timestamp"] = pd.to_datetime(all_df["order_purchase_timestamp"], errors="coerce")
