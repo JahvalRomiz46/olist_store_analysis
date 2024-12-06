@@ -48,7 +48,7 @@ with st.sidebar:
     # Menambahkan logo perusahaan
     layout1, layout2, layout3 = st.columns([1, 2, 1])
     with layout2:
-        st.image("olist_logo.png", width=100)
+        st.image("dashboard/olist_logo.png", width=100)
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
