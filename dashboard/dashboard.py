@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from babel.numbers import format_currency
+from datetime import timedelta
 
 # Menyiapkan dataframe order items
 def create_sum_order_items_df(df):
@@ -13,7 +14,7 @@ def create_sum_order_items_df(df):
 
 # Menyiapkan df untuk menghasilkan rfm
 def create_rfm_df(df):
-    rfm_df = all_df.groupby(by="customer_id", as_index=False).agg({
+    rfm_df = df.groupby(by="customer_id", as_index=False).agg({
         "order_purchase_timestamp": "max", # mengambil tanggal order terakhir
         "order_id": "nunique", # menghitung jumlah order
         "price": "sum" # menghitung jumlah revenue yang dihasilkan
@@ -34,14 +35,9 @@ all_df = pd.read_csv("dashboard/all_data.csv")
 # Memastikan kolom format datetime
 all_df["order_purchase_timestamp"] = pd.to_datetime(all_df["order_purchase_timestamp"], errors="coerce")
 
-# datetime_columns = ["order_purchase_timestamp"]
- 
-# for column in datetime_columns:
-#   all_df[column] = pd.to_datetime(all_df[column])
-
 # Inisialisasi filter rentang tanggal
 min_date = all_df["order_purchase_timestamp"].min()
-max_date = all_df["order_purchase_timestamp"].max()
+max_date = all_df["order_purchase_timestamp"].max()+timedelta(days=1)
 
 #Tampilin sidebar dengan Date Input
 with st.sidebar:
@@ -116,7 +112,7 @@ with col3:
     avg_frequency = format_currency(rfm_df.monetary.mean(), "R$", locale='es_CO') 
     st.metric("Average Monetary", value=avg_frequency)
  
-fig, ax = plt.subplots(nrows=1, ncols=3, figsize=(35, 15))
+fig, ax = plt.subplots(nrows=1, ncols=3, figsize=(40, 15))
 colors = ["#90CAF9", "#90CAF9", "#90CAF9", "#90CAF9", "#90CAF9"]
  
 sns.barplot(y="recency", x="customer_id", data=rfm_df.sort_values(by="recency", ascending=True).head(5), palette=colors, ax=ax[0])
