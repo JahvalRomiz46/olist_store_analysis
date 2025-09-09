@@ -42,13 +42,13 @@ Proyek ini merupakan analisis data eksplorasi (Exploratory Data Analysis/EDA) da
 ---
 
 ## Proses Analisis
-###1. Data Wrangling
+### 1. Data Wrangling
 * **Penggabungan Data**: Menggabungkan beberapa dataset menjadi satu DataFrame untuk memudahkan analisis.
 * **Standardisasi**: Menerjemahkan nama kategori produk dari bahasa Portugis ke bahasa Inggris.
 * **Penanganan Data Hilang**: Mengisi nilai `NULL` pada beberapa kolom tanggal dengan nilai modus dan mengkonversi tipe data `date` menjadi `datetime`.
 * **Penanganan Duplikat**: Mengidentifikasi dan menghapus data duplikat yang tidak diperlukan.
 
-## 2. Exploratory Data Analysis (EDA)
+### 2. Exploratory Data Analysis (EDA)
 * Menganalisis total penjualan per kategori produk untuk mengidentifikasi produk terlaris dan terlemah.
 * Menghitung parameter RFM untuk mengidentifikasi pelanggan terbaik.
   - Recency: Menghitung jumlah hari sejak pembelian terakhir.
