@@ -1,4 +1,4 @@
-# Analisis Data Penjualan Online Store / e-Commerce 📊
+# Analisis Data Penjualan Online Store dengan Python & Streamlit📊
 <br>
 
 ## Deskripsi Proyek
