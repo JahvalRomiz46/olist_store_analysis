@@ -1,4 +1,4 @@
-# Analisis Data Penjualan Olist Store 📊
+# Analisis Data Penjualan Online Store / e-Commerce 📊
 <br>
 
 ## Deskripsi Proyek
