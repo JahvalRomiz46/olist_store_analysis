@@ -2,7 +2,7 @@
 <br>
 
 ## Deskripsi Proyek
-Proyek ini merupakan analisis data eksplorasi (Exploratory Data Analysis/EDA) dari dataset e-commerce publik Olist. Tujuan utama proyek ini adalah untuk menganalisis tren penjualan, mengidentifikasi produk yang paling diminati, dan memahami perilaku pelanggan melalui analisis RFM (Recency, Frequency, Monetary). Seluruh proses analisis dan visualisasi data dilakukan menggunakan Python.
+Proyek ini merupakan analisis data dari dataset e-commerce. Tujuan utama proyek ini adalah untuk menganalisis tren penjualan, mengidentifikasi produk yang paling diminati, dan memahami perilaku pelanggan melalui analisis RFM (Recency, Frequency, Monetary). Seluruh proses analisis dan visualisasi data dilakukan menggunakan Python.
 
 ---
 
